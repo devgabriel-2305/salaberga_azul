@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    cursor: url("imagens/Iconarchive-Fish-Illustration-Fish-5.24.png"), auto;
+}
+:root{
+    --ceu: #051D43;
+    --escuro: #02488E;
+    --claro: #4969A2;
+    --white: #ecfeff;
+}
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+nav ul li{
+    list-style-type: none;
+}
+nav > ul > li{
+    position: relative;
+}
+nav > ul > li > a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--claro);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .4s ease-in-out;
+}
+nav > ul > li > a:hover::after{
+    width: 100%;
+}
+#itens > li > a{
+    transition: .2s ease-in-out;
+
+}
+#itens > li > a:hover{
+    color: var(--claro);
+}
+#btn-mobile{
+    display: none;
+}
+/*ANIMAÇÂO HERO*/
+.btnexplorar{
+    border: 1px solid var(--white);
+}
+.btnexplorar:hover{
+    background-color: var(--ceu);
+    color: var(--white);
+}
+.hero h2{
+    opacity: 0;
+    animation: revelar 1s ease-out forwards;
+}
+.hero p{
+    opacity: 0;
+    animation: revelar 1s ease-out .4s forwards;
+}
+.btnexplorar{
+    opacity: 0;
+    animation: revelar 1s ease-out .8s forwards;
+}
+@keyframes revelar {
+    from{
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*EFEITO DE BOLHAS*/
+.bolhas{
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+   
+}
+.bolha{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.134);
+    bottom: -100px;
+    border-radius: 50%;
+    animation: subir 8s linear infinite;
+}
+@keyframes subir{
+    from{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+/*MENU MOBILE*/
+@media screen and (max-width: 768px){
+    #btn-mobile{
+        display: block;
+        border: 2px solid var(--white);
+        border-radius: 5px;
+        padding: 1px 2px;
+        line-height: 1;
+    }
+    #itens li a{
+        border-bottom: 1px solid var(--white);
+        width: 100%;
+        display: block;
+        padding: 18px;
+    }
+    #itens{
+        visibility: hidden;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        height: 0;
+        overflow-y: hidden;
+        width: 100%;
+        text-align: center;
+        background-color: #051d43;
+        transition-duration: .8s;
+    }
+    #menu.active #itens{
+        visibility: visible;
+        height: 50vh;
+    }
+    nav > ul > li > a:hover::after{
+    width: 0;
+}
+}

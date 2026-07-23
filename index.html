@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/logo.jpeg" type="image/x-icon">
+    <title>Salaberga Azul | Blue Future</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <meta name="description" content="Salaberga Azul promove a cultura oceânica e ações de preservação dos oceanos. Conheça nossos projetos e iniciativas.">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Original+Surfer&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+   <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+                ceu: "#051D43",
+                escuro: "#02488E",
+                claro: "#4969A2",
+                white: "#ecfeff"
+            },
+            fontFamily: {
+                lilita: ["Lilita One", "sans-serif"],
+                surfer: ["Original Surfer", "cursive"],
+                share: ['"Share Tech Mono"', 'monospace']
+            }
+            }
+        }
+    }
+</script>
+</head>
+<body>
+    <header class="bg-ceu px-5 text-white flex justify-between items-center p-6">
+        <h1 class="font-bolder text-2xl md:text-4xl ml-2 font-lilita"><a href="https://www.instagram.com/salabergaazul?igsh=MThraWZuZnhsZ2kwbw==" target="_blank">Salaberga <span class="text-claro">Azul</span></a></h1>
+        <nav id="menu">
+            <button id="btn-mobile"><span id="simbol" class="material-symbols-outlined">Menu</span></button>
+            <ul id="itens" class="text-lg font-semibold flex gap-4">
+                <li><a href=""><i class="bi bi-info-square"></i> Sobre</a></li>
+                <li><a href=""><i class="bi bi-folder"></i> Projetos</a></li>
+                <li><a href=""><i class="bi bi-images"></i> Galeria</a></li>
+                <li><a href=""><i class="bi bi-people"></i> Equipe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <!--HERO SECTION-->
+        <section class="hero relative h-screen overflow-hidden px-7">
+            <div class="bolhas"></div>
+            <img src="imagens/hero.jpg" alt="Oceano animation" class="inset-0 absolute h-full w-full object-cover">
+            <div class="absolute bg-black/50 inset-0"></div>
+            <div class="h-full pt-20 relative z-10">
+                <div class="h-full flex justify-center items-center flex-col text-center">
+                    <h2 class="text-3xl md:text-5xl xl:text-6xl text-white text-center font-surfer font-bold">Cultura <span class="text-ceu">Oceânica</span> em Ação</h2>
+
+                    <p class="pt-2 text-lg md:text-xl text-white mb-8 font-share font-semibold">O outro lado do oceano</p>
+
+                    <a href="#" class="btnexplorar bg-white text-ceu text-base md:text-lg px-4 py-3 font-share font-semibold rounded-lg transition duration-700 ease-in-out">EXPLORAR &#x1F6A2;</a>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+     
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+</html>
