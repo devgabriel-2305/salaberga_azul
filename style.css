@@ -1,141 +1,263 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    cursor: url("imagens/Iconarchive-Fish-Illustration-Fish-5.24.png"), auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  cursor: url("imagens/Iconarchive-Fish-Illustration-Fish-5.24.png"), auto;
 }
-:root{
-    --ceu: #051D43;
-    --escuro: #02488E;
-    --claro: #4969A2;
-    --white: #ecfeff;
+:root {
+  --ceu: #051d43;
+  --escuro: #02488e;
+  --claro: #4969a2;
+  --white: #ecfeff;
 }
-header{
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
-nav ul li{
-    list-style-type: none;
+body {
+  overflow-x: hidden;
 }
-nav > ul > li{
-    position: relative;
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
 }
-nav > ul > li > a::after{
-    content: '';
-    width: 0;
-    height: 2px;
-    background-color: var(--claro);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transition: .4s ease-in-out;
+nav ul li {
+  list-style-type: none;
 }
-nav > ul > li > a:hover::after{
-    width: 100%;
+nav > ul > li {
+  position: relative;
 }
-#itens > li > a{
-    transition: .2s ease-in-out;
-
+nav > ul > li > a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--claro);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.4s ease-in-out;
 }
-#itens > li > a:hover{
-    color: var(--claro);
+nav > ul > li > a:hover::after {
+  width: 100%;
 }
-#btn-mobile{
-    display: none;
+#itens > li > a {
+  transition: 0.2s ease-in-out;
+}
+#itens > li > a:hover {
+  color: var(--claro);
+}
+#btn-mobile {
+  display: none;
 }
 /*ANIMAÇÂO HERO*/
-.btnexplorar{
-    border: 1px solid var(--white);
+.btnexplorar {
+  border: 1px solid var(--white);
 }
-.btnexplorar:hover{
-    background-color: var(--ceu);
-    color: var(--white);
+.btnexplorar:hover {
+  background-color: var(--ceu);
+  color: var(--white);
 }
-.hero h2{
-    opacity: 0;
-    animation: revelar 1s ease-out forwards;
+.hero h2 {
+  opacity: 0;
+  animation: revelar 1s ease-out forwards;
 }
-.hero p{
-    opacity: 0;
-    animation: revelar 1s ease-out .4s forwards;
+.hero p {
+  opacity: 0;
+  animation: revelar 1s ease-out 0.4s forwards;
 }
-.btnexplorar{
-    opacity: 0;
-    animation: revelar 1s ease-out .8s forwards;
+.btnexplorar {
+  opacity: 0;
+  animation: revelar 1s ease-out 0.8s forwards;
 }
 @keyframes revelar {
-    from{
-        opacity: 0;
-        transform: translateY(80px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /*EFEITO DE BOLHAS*/
-.bolhas{
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    z-index: 1;
-   
+.bolhas {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
 }
-.bolha{
-    position: absolute;
-    background: rgba(255, 255, 255, 0.134);
-    bottom: -100px;
-    border-radius: 50%;
-    animation: subir 8s linear infinite;
+.bolha {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.134);
+  bottom: -100px;
+  border-radius: 50%;
+  animation: subir 8s linear infinite;
 }
-@keyframes subir{
-    from{
-        transform: translateY(0);
-        opacity: 0;
-    }
-    20%{
-        opacity: 1;
-    }
-    to{
-        transform: translateY(-120vh);
-        opacity: 0;
-    }
+@keyframes subir {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
 }
 /*MENU MOBILE*/
-@media screen and (max-width: 768px){
-    #btn-mobile{
-        display: block;
-        border: 2px solid var(--white);
-        border-radius: 5px;
-        padding: 1px 2px;
-        line-height: 1;
-    }
-    #itens li a{
-        border-bottom: 1px solid var(--white);
-        width: 100%;
-        display: block;
-        padding: 18px;
-    }
-    #itens{
-        visibility: hidden;
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 80px;
-        height: 0;
-        overflow-y: hidden;
-        width: 100%;
-        text-align: center;
-        background-color: #051d43;
-        transition-duration: .8s;
-    }
-    #menu.active #itens{
-        visibility: visible;
-        height: 50vh;
-    }
-    nav > ul > li > a:hover::after{
+@media screen and (max-width: 768px) {
+  #btn-mobile {
+    display: block;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    padding: 1px 2px;
+    line-height: 1;
+  }
+  #itens li a {
+    border-bottom: 1px solid var(--white);
+    width: 100%;
+    display: block;
+    padding: 18px;
+  }
+  #itens {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    height: 0;
+    overflow-y: hidden;
+    width: 100%;
+    text-align: center;
+    background-color: #051d43;
+    transition-duration: 0.8s;
+  }
+  #menu.active #itens {
+    visibility: visible;
+    height: 50vh;
+  }
+  nav > ul > li > a:hover::after {
     width: 0;
+  }
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ceu);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0ea5e9, #0284c7, #0369a1);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #22d3ee, #0ea5e9, #0284c7);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
+
+.stage {
+  perspective: 1400px;
+  width: min(92vw, 380px);
+  height: clamp(300px, 82vw, 400px);
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 330px;
+  background: #fffdf8;
+  padding: clamp(10px, 3vw, 18px) clamp(10px, 3vw, 18px) clamp(38px, 11vw, 60px);
+  box-shadow:
+    0 10px 25px -5px rgba(60, 45, 30, 0.25),
+    0 4px 8px -2px rgba(60, 45, 30, 0.15);
+  transition:
+    transform 0.55s cubic-bezier(0.25, 0.8, 0.25, 1),
+    opacity 0.55s ease,
+    filter 0.55s ease;
+  cursor: grab;
+  user-select: none;
+}
+.card:active {
+  cursor: grabbing;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  filter: sepia(0.08) contrast(1.02);
+}
+
+.card p {
+  font-size: clamp(1.05rem, 4vw, 1.5rem);
+}
+
+.tape {
+  position: absolute;
+  top: clamp(-12px, -3vw, -14px);
+  width: clamp(46px, 14vw, 70px);
+  height: clamp(18px, 5vw, 26px);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--escuro);
+  transition: all 0.3s ease;
+}
+.dot.active {
+  background: var(--claro);
+  width: 22px;
+  border-radius: 999px;
+}
+
+.prog-btn {
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+.prog-btn:hover {
+  transform: scale(1.08);
+}
+.prog-btn:active {
+  transform: scale(0.95);
 }

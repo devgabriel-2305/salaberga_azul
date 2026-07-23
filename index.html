@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,44 +10,50 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <meta name="description" content="Salaberga Azul promove a cultura oceânica e ações de preservação dos oceanos. Conheça nossos projetos e iniciativas.">
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Original+Surfer&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-   <script>
+    <meta name="description"
+        content="Salaberga Azul promove a cultura oceânica e ações de preservação dos oceanos. Conheça nossos projetos e iniciativas.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Original+Surfer&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <script>
         tailwind.config = {
-        theme: {
-            extend: {
-            colors: {
-                ceu: "#051D43",
-                escuro: "#02488E",
-                claro: "#4969A2",
-                white: "#ecfeff"
-            },
-            fontFamily: {
-                lilita: ["Lilita One", "sans-serif"],
-                surfer: ["Original Surfer", "cursive"],
-                share: ['"Share Tech Mono"', 'monospace']
-            }
+            theme: {
+                extend: {
+                    colors: {
+                        ceu: "#051D43",
+                        escuro: "#02488E",
+                        claro: "#4969A2",
+                        white: "#ecfeff"
+                    },
+                    fontFamily: {
+                        lilita: ["Lilita One", "sans-serif"],
+                        surfer: ["Original Surfer", "cursive"],
+                        share: ['"Share Tech Mono"', 'monospace']
+                    }
+                }
             }
         }
-    }
-</script>
+    </script>
 </head>
-<body>
-    <header class="bg-ceu px-5 text-white flex justify-between items-center p-6">
-        <h1 class="font-bolder text-2xl md:text-4xl ml-2 font-lilita"><a href="https://www.instagram.com/salabergaazul?igsh=MThraWZuZnhsZ2kwbw==" target="_blank">Salaberga <span class="text-claro">Azul</span></a></h1>
+
+<body class="bg-white">
+    <header class="bg-ceu px-5 text-white flex justify-between items-center p-6 border-b border-white">
+        <h1 class="font-bolder text-2xl md:text-4xl ml-2 font-lilita"><a
+                href="https://www.instagram.com/salabergaazul?igsh=MThraWZuZnhsZ2kwbw==" target="_blank">Salaberga <span
+                    class="text-claro">Azul</span></a></h1>
         <nav id="menu">
             <button id="btn-mobile"><span id="simbol" class="material-symbols-outlined">Menu</span></button>
             <ul id="itens" class="text-lg font-semibold flex gap-4">
-                <li><a href=""><i class="bi bi-info-square"></i> Sobre</a></li>
-                <li><a href=""><i class="bi bi-folder"></i> Projetos</a></li>
-                <li><a href=""><i class="bi bi-images"></i> Galeria</a></li>
-                <li><a href=""><i class="bi bi-people"></i> Equipe</a></li>
+                <li><a href="#about"><i class="bi bi-info-square"></i> Sobre</a></li>
+                <li><a href="#projects"><i class="bi bi-folder"></i> Projetos</a></li>
+                <li><a href="#gallery"><i class="bi bi-images"></i> Galeria</a></li>
+                <li><a href="#team"><i class="bi bi-people"></i> Equipe</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        
+
         <!--HERO SECTION-->
         <section class="hero relative h-screen overflow-hidden px-7">
             <div class="bolhas"></div>
@@ -54,18 +61,135 @@
             <div class="absolute bg-black/50 inset-0"></div>
             <div class="h-full pt-20 relative z-10">
                 <div class="h-full flex justify-center items-center flex-col text-center">
-                    <h2 class="text-3xl md:text-5xl xl:text-6xl text-white text-center font-surfer font-bold">Cultura <span class="text-ceu">Oceânica</span> em Ação</h2>
+                    <h2 class="text-3xl md:text-5xl xl:text-6xl text-white text-center font-surfer font-bold">Cultura
+                        <span class="text-ceu">Oceânica</span> em Ação
+                    </h2>
 
-                    <p class="pt-2 text-lg md:text-xl text-white mb-8 font-share font-semibold">O outro lado do oceano</p>
+                    <p class="pt-2 text-lg md:text-xl text-white mb-8 font-share font-semibold">O outro lado do oceano
+                    </p>
 
-                    <a href="#" class="btnexplorar bg-white text-ceu text-base md:text-lg px-4 py-3 font-share font-semibold rounded-lg transition duration-700 ease-in-out">EXPLORAR &#x1F6A2;</a>
-                    
+                    <a href="#"
+                        class="btnexplorar bg-white text-ceu text-base md:text-lg px-4 py-3 font-share font-semibold rounded-lg transition duration-700 ease-in-out">EXPLORAR
+                        &#x1F6A2;</a>
+
                 </div>
             </div>
         </section>
+
+        <!--ABOUT SECTION-->
+        <section class="bg-white relative z-10 py-24 px-6 text-center max-w-6xl mx-auto" id="about">
+            <span
+                class="reveal font-share inline-block bg-claro border-2 border-escuro text-[13px] font-bold tracking-tight text-white p-2.5 rounded-full">Quem
+                Somos Nós?</span>
+
+            <h2 class="reveal mt-5 font-bold leading-tight text-[2rem] text-escuro font-surfer">Sobre Nós</h2>
+
+            <p class="reveal mt-4 font-bold mx-auto text-gray-500 max-w-[500px] tracking-[1.7] text-[14px] font-share">
+                Nossa
+                perspectiva enquanto grupo de estudos da vida marinha.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-14 text-left">
+
+                <div class="reveal relative group rounded-2xl bg-claro border border-white/5 p-6 transition-all duration-500 ease-out hover:-translate-y-3  hover:scale-[1.02] hover:border-escuro hover:shadow-[0_20px_60px_rgba(6,182,212,0.45)]"">
+                    <div class=" absolute left-5 top-6 bottom-6 w-[4px] rounded-full bg-white"></div>
+
+                <div
+                    class="flex items-center justify-center w-12 h-12 rounded-xl bg-white border border-escuro mx-auto">
+                    <span class="text-claro">
+                        <i class="bi bi-people"></i>
+                    </span>
+                </div>
+
+                <h3 class="mt-4 text-white text-base font-semibold text-center font-share">
+                    O que é o Salaberga Azul?
+                </h3>
+
+                <p class="mt-2 text-white/60 text-sm text-center leading-relaxed font-surfer">
+                    Importante grupo de estudos dedicado à descoberta e à preservação da vida oceânica. Com o inutito de
+                    despertar o interesse pelo assunto.
+                </p>
+            </div>
+
+            <div class="reveal reveal-delay-1 relative group rounded-2xl bg-claro border border-white/5 p-6 transition-all duration-500 ease-out hover:-translate-y-3  hover:scale-[1.02] hover:border-escuro hover:shadow-[0_20px_60px_rgba(6,182,212,0.45)]"">
+                    <div class=" absolute left-5 top-6 bottom-6 w-[4px] rounded-full bg-white"></div>
+
+            <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-white border border-escuro mx-auto">
+                <span class="text-claro">
+                    <i class="bi bi-bullseye"></i>
+                </span>
+            </div>
+
+            <h3 class="mt-4 text-white text-base font-semibold text-center font-share">
+                Objetivo
+            </h3>
+
+            <p class="mt-2 text-white/60 text-sm text-center leading-relaxed font-surfer p-2">
+                Promover o conhecimento sobre a vida oceânica, incentivando a pesquisa, a educação ambiental e a
+                preservação dos ecossistemas marinhos.
+            </p>
+            </div>
+
+            <div class="reveal reveal-delay-2 relative group rounded-2xl bg-claro border border-white/5 p-6 transition-all duration-500 ease-out hover:-translate-y-3  hover:scale-[1.02] hover:border-escuro hover:shadow-[0_20px_60px_rgba(6,182,212,0.45)]"">
+                    <div class=" absolute left-5 top-6 bottom-6 w-[4px] rounded-full bg-white"></div>
+
+            <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-white border border-escuro mx-auto">
+                <span class="text-claro">
+                    <i class="bi bi-globe-americas"></i>
+                </span>
+            </div>
+
+            <h3 class="mt-4 text-white text-base font-semibold text-center font-share">
+                Relevância
+            </h3>
+
+            <p class="mt-2 text-white/60 text-sm text-center leading-relaxed font-surfer">
+                Conscientizar sobre a importância dos oceanos para o equilíbrio do planeta e estimular ações
+                voltadas à conservação da biodiversidade marinha.
+            </p>
+            </div>
+
+            </div>
+        </section>
+
+        <section id="projects" class="bg-white relative z-10 py-24 px-6 text-center max-w-6xl mx-auto">
+            <span
+                class="reveal font-share inline-block bg-claro border-2 border-escuro text-[13px] font-bold tracking-tight text-white p-2.5 rounded-full">Nossos
+                registros</span>
+
+            <h2 class="reveal mt-5 font-bold leading-tight text-[2rem] text-escuro font-surfer">Destaques</h2>
+
+            <p class="reveal mt-4 font-bold mx-auto text-gray-500 max-w-[500px] tracking-[1.7] text-[14px] font-share">
+                Explorando conhecimento do ecossistema que sustenta o nosso Planeta.</p>
+
+                <div class="min-h-screen flex flex-col items-center justify-center py-16 px-4">
+            <div class="reveal reveal-delay-1 stage relative flex items-center justify-center" id="stage">
+            </div>
+
+            <div class="reveal reveal-delay-2 flex items-center gap-4 sm:gap-6 mt-6 sm:mt-8">
+                <button id="prevBtn" aria-label="Anterior"
+                    class="prog-btn w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-escuro text-white flex items-center justify-center shadow-md shrink-0">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <div class="flex gap-2" id="dots"></div>
+
+                <button id="nextBtn" aria-label="Próximo"
+                    class="prog-btn w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-escuro text-white flex items-center justify-center shadow-md shrink-0">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            </div>
+        </section>
     </main>
-     
+
     <footer></footer>
     <script src="script.js"></script>
 </body>
+
 </html>
