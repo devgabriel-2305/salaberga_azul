@@ -1,4 +1,4 @@
-/*MENU MOBILE*/
+//MENU MOBILE
 const btnmobile = document.getElementById('btn-mobile')
 function mostrar_menu() {
     let menu = document.getElementById('menu')
@@ -12,7 +12,7 @@ function mostrar_menu() {
 }
 btnmobile.addEventListener('click', mostrar_menu)
 
-/*EFEITO DE BOLHAS*/
+//EFEITO DE BOLHAS
 const areabolhas = document.querySelector('.bolhas')
 function criarBolhas() {
     const bolha = document.createElement('span')
@@ -172,4 +172,79 @@ let resizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(render, 100);
+});
+//CARROSEL TEAM
+const carrosel = document.getElementById('carrosel');
+const btnnext = document.getElementById('btnnext');
+const btnprev = document.getElementById('btnprev');
+
+const cardsClone = [...carrosel.children];
+const qtd = 3; 
+const gap = 24;
+
+cardsClone.slice(-qtd).forEach(card => {
+    carrosel.prepend(card.cloneNode(true));
+});
+
+cardsClone.slice(0, qtd).forEach(card => {
+    carrosel.append(card.cloneNode(true));
+});
+
+function qtdCards() {
+    if (window.innerWidth < 768) {
+        return 1;
+    } else if (window.innerWidth < 992) {
+        return 2;
+    } else {
+        return 3;
+    }
+}
+let passo = qtdCards(); // quantidade de cards que vai mover
+let indice = qtd;       // começa no primeiro card original
+let animando = false;
+function largura() {
+    return carrosel.children[0].offsetWidth + gap;
+}
+function atualizar(animacao = true) {
+    if (animacao) {
+        carrosel.style.transition = 'transform 1s';
+    } else {
+        carrosel.style.transition = 'none';
+    }
+    carrosel.style.transform = `translateX(-${largura() * indice}px)`;
+    animando = animacao;
+}
+atualizar(false);
+btnnext.addEventListener('click', () => {
+    if (animando) return;
+    indice += passo;
+    atualizar();
+
+});
+btnprev.addEventListener('click', () => {
+    if (animando) return;
+    indice -= passo;
+    atualizar();
+
+});
+carrosel.addEventListener('transitionend', () => {
+    animando = false;
+    const total = cardsClone.length;
+    if (indice >= total + qtd) {
+        indice = qtd;
+        atualizar(false);
+    }
+    if (indice < qtd) {
+        indice = total;
+        atualizar(false);
+    }
+});
+setInterval(() => {
+    if (animando) return;
+    indice += passo;
+    atualizar();
+}, 4000);
+window.addEventListener('resize', () => {
+    passo = qtdCards();
+    atualizar(false);
 });

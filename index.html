@@ -10,11 +10,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Original+Surfer&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
     <meta name="description"
         content="Salaberga Azul promove a cultura oceânica e ações de preservação dos oceanos. Conheça nossos projetos e iniciativas.">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Original+Surfer&family=Share+Tech+Mono&display=swap"
-        rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -64,12 +63,9 @@
                     <h2 class="text-3xl md:text-5xl xl:text-6xl text-white text-center font-surfer font-bold">Cultura
                         <span class="text-ceu">Oceânica</span> em Ação
                     </h2>
-
                     <p class="pt-2 text-lg md:text-xl text-white mb-8 font-share font-semibold">O outro lado do oceano
                     </p>
-
-                    <a href="#"
-                        class="btnexplorar bg-white text-ceu text-base md:text-lg px-4 py-3 font-share font-semibold rounded-lg transition duration-700 ease-in-out">EXPLORAR
+                    <a href="#about" class="btnexplorar bg-white text-ceu text-base md:text-lg px-4 py-3 font-share font-semibold rounded-lg transition duration-700 ease-in-out">EXPLORAR
                         &#x1F6A2;</a>
 
                 </div>
@@ -84,7 +80,7 @@
 
             <h2 class="reveal mt-5 font-bold leading-tight text-[2rem] text-escuro font-surfer">Sobre Nós</h2>
 
-            <p class="reveal mt-4 font-bold mx-auto text-gray-500 max-w-[500px] tracking-[1.7] text-[14px] font-share">
+            <p class="reveal mt-4 font-bold mx-auto text-gray-700 max-w-[500px] tracking-[1.7] text-[14px] font-share">
                 Nossa
                 perspectiva enquanto grupo de estudos da vida marinha.</p>
 
@@ -158,7 +154,7 @@
 
             <h2 class="reveal mt-5 font-bold leading-tight text-[2rem] text-escuro font-surfer">Destaques</h2>
 
-            <p class="reveal mt-4 font-bold mx-auto text-gray-500 max-w-[500px] tracking-[1.7] text-[14px] font-share">
+            <p class="reveal mt-4 font-bold mx-auto text-gray-700 max-w-[500px] tracking-[1.7] text-[14px] font-share">
                 Explorando conhecimento do ecossistema que sustenta o nosso Planeta.</p>
 
                 <div class="min-h-screen flex flex-col items-center justify-center py-16 px-4">
@@ -186,8 +182,158 @@
             </div>
             </div>
         </section>
+        <!--SECTION GALLERY-->
+        <section id="gallery" class="galeria py-24 px-6">
+            <h1 class="text-center text-escuro font-surfer font-bold text-[2rem] mb-3 ">Galeria de Fotos</h1>
+            <p class="text-center text-gray-700 font-share font-bold max-w-2xl mx-auto mb-10">Registros de momentos importantes do nosso projeto</p>
+            <div class="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+                <img src="imagens/galeria/salaazul01_galeria.jpeg" alt="Sala azul" class="makegaleria object-cover h-64 w-full">
+                <img src="imagens/galeria/salaazul02_galeria.jpeg" alt="Sala azul" class="makegaleria object-cover h-64 w-full">
+                <img src="imagens/galeria/salaazul03_galeria.jpeg" alt="Sala azul" class="makegaleria object-cover h-64 w-full">
+                <img src="imagens/galeria/salaazul04_galeria.jpeg" alt="Sala azul" class="makegaleria object-cover h-64 w-full">
+                <img src="imagens/galeria/salaazul05_galeria.jpeg" alt="Sala azul" class="makegaleria object-cover h-64 w-full">
+                <img src="imagens/unifor.jpeg" alt="Sala azul" class="makegaleria object-cover h-64 w-full">
+                 <img src="imagens/galeria/salaazul03_galeria.jpeg" alt="Sala azul" class="makegaleria object-cover h-64 w-full">
+                <img src="imagens/galeria/salaazul04_galeria.jpeg" alt="Sala azul" class="makegaleria object-cover h-64 w-full">
+            </div>
+        </section>
+        <!--SECTION TEAM-->
+        <section id="team" class="galeria py-24 px-6 bg-ceu">
+            <h2  class="text-center text-escuro font-surfer font-bold text-[2rem] mb-3 ">Conheça Nossa Equipe</h2>
+            <p class="text-center text-gray-700 font-share font-bold max-w-2xl mx-auto mb-10">Conheça quem transforma ideias em ações.</p>
+            <div class="relative max-w-6xl px-12 mx-auto">
+                <button id="btnnext" class="btncards h-12 w-12 bg-escuro rounded-full">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+                <div class="overflow-hidden">
+                    <div id="carrosel" class="flex gap-6">
+                            <div class="card-team bg-white pt-8">    
+                             <img src="imagens/equipe/orientadora01.jpeg" alt="" class="h-32 border-2 border-green-700 object-cover">
+                                <div class="conteudo-equipe text-center">
+                                    <h3 class="font-surfer text-2xl">Karolina Medeiros</h3>
+                                    <p class="italic">Professora/Orientadora</p>
+                                    <span class="inline-block font-share rounded-lg bg-green-700 mt-4 px-5 py-2">Biologia &#127793;</span>
+                                </div>
+                            </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/orientadora02.jpeg" alt="" class="h-32 border-2 border-yellow-900 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Kananda Sena</h3>
+                                <p class="italic">Professora/Orientadora</p>
+                                <span class="inline-block font-share rounded-lg bg-yellow-900 mt-4 px-5 py-2">Geografia &#127757;</span>
+                            </div>
+                        </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/orientadora03.jpeg" alt="" class="h-32 border-2 border-green-700 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Gracinha</h3>
+                                <p class="italic">Professora/Orientadora</p>
+                                <span class="inline-block font-share rounded-lg bg-green-700 mt-4 px-5 py-2">Biologia &#127793;</span>
+                            </div>
+                        </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/embaixador01.jpeg" alt="" class="h-32 border-2 border-sky-800 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Daniel</h3>
+                                <p class="italic">Aluno/Embaixador</p>
+                                <span class="inline-block font-share rounded-lg bg-sky-800 mt-4 px-5 py-2">2º Administração &#x1F4BC;</span>
+                            </div>
+                        </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/embaixador02.jpeg" alt="" class="h-32 border-2 border-sky-800 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Lizandra</h3>
+                                <p class="italic">Aluna/Embaixadora</p>
+                                <span class="inline-block font-share rounded-lg bg-sky-800 mt-4 px-5 py-2">2º Administração &#x1F4BC;</span>
+                            </div>
+                        </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/embaixador03.jpeg" alt="" class="h-32 border-2 border-sky-800 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Bianca</h3>
+                                <p class="italic">Aluna/Embaixadora</p>
+                                <span class="inline-block font-share rounded-lg bg-sky-800 mt-4 px-5 py-2">2º Administração &#x1F4BC;</span>
+                            </div>
+                        </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/embaixador04.jpeg" alt="" class="h-32 border-2 border-sky-800 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Kayron</h3>
+                                <p class="italic">Aluno/Embaixador</p>
+                                <span class="inline-block font-share rounded-lg bg-sky-800 mt-4 px-5 py-2">2º Administração &#x1F4BC;</span>
+                            </div>
+                        </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/embaixador05.jpeg" alt="" class="h-32 border-2 border-violet-900 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Kayo</h3>
+                                <p class="italic">Aluno/Embaixador</p>
+                                <span class="inline-block font-share rounded-lg bg-violet-900 mt-4 px-5 py-2">2º Edificações &#x1F477;</span>
+                            </div>
+                        </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/embaixador06.jpeg" alt="" class="h-32 border-2 border-blue-900 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Miguel</h3>
+                                <p class="italic">Aluno/Embaixador</p>
+                                <span class="inline-block font-share rounded-lg bg-blue-900 mt-4 px-5 py-2">2º Informática &#x1F4BB;</span>
+                            </div>
+                        </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/embaixador07.jpeg" alt="" class="h-32 border-2 border-violet-900 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Gabriel</h3>
+                                <p class="italic">Aluno/Embaixador</p>
+                                <span class="inline-block font-share rounded-lg bg-violet-900 mt-4 px-5 py-2">2º Edificações &#x1F477;</span>
+                            </div>
+                        </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/embaixador08.jpeg" alt="" class="h-32 border-2 border-red-800 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Samuel</h3>
+                                <p class="italic">Aluno/Embaixador</p>
+                                <span class="inline-block font-share rounded-lg bg-red-800 mt-4 px-5 py-2">2º Enfermagem &#x1F489;</span>
+                            </div>
+                        </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/embaixador09.jpeg" alt="" class="h-32 border-2 border-violet-900 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Ludimila</h3>
+                                <p class="italic">Aluna/Embaixadora</p>
+                                <span class="inline-block font-share rounded-lg bg-violet-900 mt-4 px-5 py-2">1º Edificações &#x1F477;</span>
+                            </div>
+                        </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/embaixador10.jpeg" alt="" class="h-32 border-2 border-blue-900 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Pedro Lucas</h3>
+                                <p class="italic">Aluno/Embaixador</p>
+                                <span class="inline-block font-share rounded-lg bg-blue-900 mt-4 px-5 py-2">1º Informática &#x1F4BB;</span>
+                            </div>
+                        </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/embaixador11.jpeg" alt="" class="h-32 border-2 border-violet-900 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Sarah</h3>
+                                <p class="italic">Aluna/Embaixadora</p>
+                                <span class="inline-block font-share rounded-lg bg-violet-900 mt-4 px-5 py-2">1º Edificações &#x1F477;</span>
+                            </div>
+                        </div>
+                        <div class="card-team bg-white pt-8">
+                            <img src="imagens/equipe/embaixador12.jpeg" alt="" class="h-32 border-2 border-blue-900 object-cover">
+                            <div class="conteudo-equipe text-center">
+                                <h3 class="font-surfer text-2xl">Gean</h3>
+                                <p class="italic">Aluno/Embaixador</p>
+                                <span class="inline-block font-share rounded-lg bg-blue-900 mt-4 px-5 py-2">1º Informática &#x1F4BB;</span>
+                            </div>
+                        </div>
+                </div>
+               <button id="btnprev" class="btncards h-12 w-12 bg-escuro rounded-full">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+            </div>
+        </section>
     </main>
-
     <footer></footer>
     <script src="script.js"></script>
 </body>

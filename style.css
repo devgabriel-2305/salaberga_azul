@@ -261,3 +261,71 @@ nav > ul > li > a:hover::after {
 .prog-btn:active {
   transform: scale(0.95);
 }
+.makegaleria{
+  border-radius: 10px;
+  transition-duration: .4s;
+}
+.makegaleria:hover{
+  transform: scale(1.05);
+}
+.card-team{
+   flex: 0 0 calc((100% - 48px) / 3);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: auto;
+}
+.card-team img{
+  border-radius: 50%;
+  padding: 3px;
+}
+.conteudo-equipe{
+  margin-top: 20px;
+  padding: 30px 0;
+  background-color: var(--claro);
+  height: 100%;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.btncards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btncards span{
+  color: rgb(255, 254, 254);
+  font-size: 2.5em;
+}
+#btnnext{
+  position: absolute;
+  right: 0;
+  top: 40%;
+  transform: translateX(5%);
+  z-index: 1000;
+}
+#btnprev{
+  position: absolute;
+  top: 40%;
+  left: 0;
+  transform: translateX(-5%);
+  z-index: 1000;
+}
+
+@media screen and (max-width: 768px) {
+ .card-team{
+        width: 100%;
+        flex: 0 0 100%;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .card-team{
+        flex: 0 0 calc((100% - 24px) / 2);
+    }
+}
+
+
