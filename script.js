@@ -207,7 +207,7 @@ function largura() {
 }
 function atualizar(animacao = true) {
     if (animacao) {
-        carrosel.style.transition = 'transform 1s';
+        carrosel.style.transition = 'transform .85s';
     } else {
         carrosel.style.transition = 'none';
     }
