@@ -199,8 +199,8 @@ function qtdCards() {
         return 3;
     }
 }
-let passo = qtdCards(); // quantidade de cards que vai mover
-let indice = qtd;       // começa no primeiro card original
+let passo = qtdCards(); 
+let indice = qtd;       
 let animando = false;
 function largura() {
     return carrosel.children[0].offsetWidth + gap;
