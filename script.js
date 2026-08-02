@@ -243,7 +243,7 @@ setInterval(() => {
     if (animando) return;
     indice += passo;
     atualizar();
-}, 4000);
+}, 6000);
 window.addEventListener('resize', () => {
     passo = qtdCards();
     atualizar(false);
