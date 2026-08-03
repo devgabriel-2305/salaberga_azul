@@ -248,3 +248,5 @@ window.addEventListener('resize', () => {
     passo = qtdCards();
     atualizar(false);
 });
+
+document.getElementById("ano").textContent = new Date().getFullYear();
